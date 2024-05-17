@@ -1,7 +1,7 @@
 baseURL: "https://CHANXINx.github.io/"
 languageCode: zh-cn # en-us
 title: CHANXIN's Blog
-theme: PaperMod # 主题名字，和themes文件夹下的一致
+theme: ["PaperMod"] # 主题名字，和themes文件夹下的一致
 
 enableInlineShortcodes: true #允许内联短码
 enableEmoji: true # 允许使用 Emoji 表情，建议 true
