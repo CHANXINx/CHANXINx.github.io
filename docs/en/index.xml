@@ -6,8 +6,15 @@
     <description>Recent content on CHANXIN&#39;s Blog</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 May 2024 09:41:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 11:39:23 +0800</lastBuildDate>
     <atom:link href="https://CHANXINx.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🙋🏻‍♂️About Me</title>
+      <link>https://CHANXINx.github.io/en/about/</link>
+      <pubDate>Fri, 17 May 2024 11:39:23 +0800</pubDate>
+      <guid>https://CHANXINx.github.io/en/about/</guid>
+      <description>姓名: CHANXIN 职业: 学生 所在地： 湖北武汉 📚博客更新记录 2024.5.17 更新内容： 初步搭建好个人博客，完成初步的博客分类，个人介绍等。 下一步打算： 评论功能、阅读量</description>
+    </item>
     <item>
       <title>Testtop</title>
       <link>https://CHANXINx.github.io/en/posts/tech/testtop/testtop/</link>

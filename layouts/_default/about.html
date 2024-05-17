@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="about-page">
+    <div class="profile-section">
+        <img src="{{ "imgs/Myprofile.jpg" | relURL }}" alt="Profile Image" class="profile-image">
+        <h1>{{ .Title }}</h1>
+        <p class="author">{{ .Site.Params.author }}</p>
+        <p class="description">{{ .Description }}</p>
+    </div>
+    <div class="content-section">
+        <h2>关于我</h2>
+        <p>小绵尾巴 是网名，你也可以叫我 小绵 或 Mia。</p>
+        <p>我从 2022-07 开始写博客，第一篇博客是 <a href="#">独立博客过时后，为什么开始写博客了？</a></p>
+        <p>学习日语中，目前已通过 N2，正在为了 去东京工作 而努力。</p>
+        <p>我关注前端技术、UI/UX设计、生产力工具、书籍、女性主义、个人成长、亲密关系、数字生活等。</p>
+        <p>我非常想多认识一些前端开发工程师。</p>
+    </div>
+</div>
+{{ end }}
