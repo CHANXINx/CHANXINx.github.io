@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://CHANXINx.github.io/sitemap.xml
