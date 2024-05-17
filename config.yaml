@@ -119,11 +119,11 @@ params:
       iconHeight: 35
 
     assets:
-          favicon: "imgs/myprofile.jpg"
-          favicon16x16: "imgs/myprofile.jpg"
-          favicon32x32: "imgs/myprofile.jpg"
-          apple_touch_icon: "imgs/myprofile.jpg"
-          safari_pinned_tab: "imgs/myprofile.jpg"
+          favicon: "/favicon.ico"
+          favicon16x16: "/favicon-16x16.png"
+          favicon32x32: "/favicon-32x32.png"
+          apple_touch_icon: "/apple-touch-icon.png"
+          #safari_pinned_tab: "imgs/myprofile.jpg"
     
     cover:
       image: "<image path/url>" 
