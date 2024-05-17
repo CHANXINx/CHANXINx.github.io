@@ -35,7 +35,7 @@ languages:
         enabled: true
         title: Hello!
         subtitle: "You Only Live Once!<br/>👏🏼欢迎光临CHANXIN的博客<br/>👇联系方式"
-       # imageUrl: "imgs/Myprofile.jpg" #图片放在static/img/Q.gif
+        imageUrl: "imgs/Myprofile.jpg" #图片放在static/img/Q.gif
         imageTitle: 
         imageWidth: 150
         imageHeight: 150
@@ -114,15 +114,15 @@ params:
 
     label:
       text: "CHANXIN's Blog"
-#      icon: "imgs/myprofile.jpg"
+      icon: "imgs/myprofile.jpg"
       #icon: "https://www.sulvblog.cn/Q.gif"
       iconHeight: 35
 
     assets:
-      #    favicon: "/assets/favicon.ico"
-      #    favicon16x16: "/assets/favicon-16x16.png"
-      #    favicon32x32: "/assets/favicon-32x32.png"
-      #    apple_touch_icon: "/assets/apple-touch-icon.png"
+          favicon: "/assets/favicon.ico"
+          favicon16x16: "/assets/favicon-16x16.png"
+          favicon32x32: "/assets/favicon-32x32.png"
+          apple_touch_icon: "/assets/apple-touch-icon.png"
           #safari_pinned_tab: "imgs/myprofile.jpg"
           theme_color: "#2e2e33"
           msapplication_TileColor: "#2e2e33"
