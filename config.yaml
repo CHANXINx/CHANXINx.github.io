@@ -80,7 +80,7 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    # description: "test"
+    description: "CHANXIN的博客, hugo, papermod, java, sql, front-end, back-end, full-stack"
     author: CHANXIN
     # author: ["Me", "You"] # multiple authors
     defaultTheme: auto  # defaultTheme: light or  dark 
