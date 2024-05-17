@@ -35,7 +35,7 @@ languages:
         enabled: true
         title: Hello!
         subtitle: "You Only Live Once!<br/>👏🏼欢迎光临CHANXIN的博客<br/>👇联系方式"
-        imageUrl: "imgs/Myprofile.jpg" #图片放在static/img/Q.gif
+       # imageUrl: "imgs/Myprofile.jpg" #图片放在static/img/Q.gif
         imageTitle: 
         imageWidth: 150
         imageHeight: 150
