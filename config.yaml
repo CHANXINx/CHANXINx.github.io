@@ -124,6 +124,8 @@ params:
           favicon32x32: "/favicon-32x32.png"
           apple_touch_icon: "/apple-touch-icon.png"
           #safari_pinned_tab: "imgs/myprofile.jpg"
+          theme_color: "#2e2e33"
+          msapplication_TileColor: "#2e2e33"
     
     cover:
       image: "<image path/url>" 
