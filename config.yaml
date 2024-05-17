@@ -118,12 +118,12 @@ params:
       #icon: "https://www.sulvblog.cn/Q.gif"
       iconHeight: 35
 
- #  assets:
- #       favicon: "imgs/myprofile.jpg"
- #       favicon16x16: "imgs/myprofile.jpg"
- #       favicon32x32: "imgs/myprofile.jpg"
- #       apple_touch_icon: "imgs/myprofile.jpg"
- #       safari_pinned_tab: "imgs/myprofile.jpg"
+    assets:
+          favicon: "imgs/myprofile.jpg"
+          favicon16x16: "imgs/myprofile.jpg"
+          favicon32x32: "imgs/myprofile.jpg"
+          apple_touch_icon: "imgs/myprofile.jpg"
+          safari_pinned_tab: "imgs/myprofile.jpg"
     
     cover:
       image: "<image path/url>" 
