@@ -28,4 +28,7 @@ cover:
 ---
 # MyFirstBlog
 test!!!!!!!!
-![](0.jpg)
+
+![insert pictures](/imgs/0.jpg)
+
+![test pictures](/imgs/1.jpg)
