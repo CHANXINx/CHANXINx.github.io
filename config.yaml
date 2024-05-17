@@ -114,7 +114,7 @@ params:
 
     label:
       text: "CHANXIN's Blog"
-      icon: "imgs/myprofile.jpg"
+#      icon: "imgs/myprofile.jpg"
       #icon: "https://www.sulvblog.cn/Q.gif"
       iconHeight: 35
 
