@@ -97,6 +97,11 @@ params:
     ShowWordCounts: true
     VisitCount: true
 
+    DateFormat: "2006-01-02"
+    ShowWordCounts: true
+    ShowReadingTime: true
+    ShowLastMod: true
+
     busuanzi:
       enable: true
       # # 是否开启全站独立访客数

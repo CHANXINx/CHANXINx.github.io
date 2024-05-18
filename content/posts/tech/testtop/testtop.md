@@ -27,3 +27,5 @@ alt: ""
 relative: false
 
 ---
+# test characters statics
+**中文字数统计：** 每个中文算1个字，标点符号也算1个。

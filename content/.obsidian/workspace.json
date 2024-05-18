@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "posts/tech/testtop/testtop.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about.md",
+                "file": "posts/tech/testtop/testtop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about.md"
+                "file": "posts/tech/testtop/testtop.md"
               }
             }
           },
@@ -179,9 +179,9 @@
   },
   "active": "26114bdd16cc8b1c",
   "lastOpenFiles": [
+    "about.md",
     "posts/life/myfirstblog/myfirstblog.md",
     "imgs/1.jpg",
-    "about.md",
     "imgs/0.jpg",
     "posts/life/myfirstblog/0.jpg",
     "imgs",
