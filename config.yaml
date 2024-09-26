@@ -23,7 +23,7 @@ permalinks: #浏览器链接显示方式
   post: "/:title/"
   # post: "/:year/:month/:day/:title/"
 
-defaultContentLanguage: zh # 最顶部首先展示的语言页面
+defaultContentLanguage: en # 最顶部首先展示的语言页面
 defaultContentLanguageInSubdir: true
 
 languages:
@@ -34,7 +34,7 @@ languages:
       profileMode:
         enabled: true
         title: Hello!
-        subtitle: "You Only Live Once!<br/>👏🏼欢迎光临CHANXIN的博客<br/>👇联系方式"
+        subtitle: "<b>You Only Live Once!</b><br/><b>👏🏼欢迎光临CHANXIN的博客<br/>👇联系方式</b>"
         imageUrl: "imgs/Myprofile.jpg" #图片放在static/img/Q.gif
         imageTitle: 
         imageWidth: 150
