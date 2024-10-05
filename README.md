@@ -1,2 +1,0 @@
-# CHANXINx.github.io
-Myblog
