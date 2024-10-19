@@ -27,14 +27,17 @@
 &lt;strong&gt;YOU ONLY LIVE ONCE!&lt;/strong&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;学生，后端开发学习中，基于个人博客的简单前端CRUD&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;📥:29chanxin@gmail.com&lt;/p&gt;
 &lt;h1 id=&#34;博客搭建记录&#34;&gt;博客搭建记录
-&lt;/h1&gt;&lt;p&gt;~&lt;/p&gt;
-&lt;ul&gt;
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(2024年5月17日)&lt;/strong&gt; 博客的初步搭建,基于PaperMod主题.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;(2024年10月5日)&lt;/strong&gt; 切换博客主题至&amp;quot;Stack&amp;quot;; 切换了网站默认字体.
 &lt;ul&gt;
 &lt;li&gt;换了个主题和默认字体,感觉写博客动力十足!更想倒腾了!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(2024年10月6日)&lt;/strong&gt; 完成博客的访问量统计,运行时间计时功能.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(2024年10月19日)&lt;/strong&gt; 完成博客的评论功能.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
