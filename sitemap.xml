@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chanxin29.com/</loc>
+    <lastmod>2024-12-22T02:10:03+08:00</lastmod>
+  </url><url>
+    <loc>https://chanxin29.com/post/</loc>
+    <lastmod>2024-12-22T02:10:03+08:00</lastmod>
+  </url><url>
+    <loc>https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2024-12-22T02:10:03+08:00</lastmod>
+  </url><url>
     <loc>https://chanxin29.com/about/</loc>
     <lastmod>2024-10-05T21:07:28+08:00</lastmod>
   </url><url>
-    <loc>https://chanxin29.com/</loc>
-    <lastmod>2024-10-05T21:07:28+08:00</lastmod>
-  </url><url>
     <loc>https://chanxin29.com/p/centos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2024-10-05T17:08:36+08:00</lastmod>
-  </url><url>
-    <loc>https://chanxin29.com/post/</loc>
     <lastmod>2024-10-05T17:08:36+08:00</lastmod>
   </url><url>
     <loc>https://chanxin29.com/p/myfirstblog/</loc>
