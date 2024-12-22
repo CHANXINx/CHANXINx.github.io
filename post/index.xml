@@ -98,8 +98,8 @@
         <description>&lt;h1 id=&#34;centos9安装&#34;&gt;CentOS9安装
 &lt;/h1&gt;&lt;p&gt;本文介绍了如何在VMware Workstation安装与配置CentOS Stream 9, 包括网络配置等.&lt;/p&gt;
 &lt;p&gt;以下将CentOS Stream 9简称为CentOS9&lt;/p&gt;
-&lt;h1 id=&#34;vmware安装&#34;&gt;VMware安装
-&lt;/h1&gt;&lt;ul&gt;
+&lt;h2 id=&#34;vmware安装&#34;&gt;VMware安装
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;官网下载,安装到自己想要的路径即可.&lt;/li&gt;
 &lt;li&gt;若安装完发现是英文版,则可通过在打开路径后面添加&lt;code&gt;--locale zh_CN&lt;/code&gt;即可.&lt;/li&gt;
 &lt;/ul&gt;
@@ -117,8 +117,8 @@
 		data-flex-basis=&#34;204px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h1 id=&#34;centos-stream-9安装与配置&#34;&gt;CentOS Stream 9安装与配置
-&lt;/h1&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;centos-stream-9安装与配置&#34;&gt;CentOS Stream 9安装与配置
+&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;因为CentOS7目前已经暂停更新了,所以作为新手,我想着还是直接安装最新的CentOS Stream 9来用.并且网络上大多是关于CentOS7的安装,故我写此博客,记录一下自己的安装过程以及踩过的坑.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&#34;https://chanxin29.com/post/CentOS9_Install/pic2.png&#34;
@@ -131,8 +131,8 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;centos9安装-1&#34;&gt;CentOS9安装
-&lt;/h2&gt;&lt;ol&gt;
+&lt;h3 id=&#34;centos9安装-1&#34;&gt;CentOS9安装
+&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;先下载CentOS9的光盘映射文件,这里建议下载**&amp;quot;~.dvd1.iso”&lt;strong&gt;文件,这样的话在创建虚拟机时,就不会出现&lt;/strong&gt;&amp;ldquo;下载软件元数据包”**的错误.&lt;/p&gt;
 &lt;p&gt;下载地址:&lt;a class=&#34;link&#34; href=&#34;https://mirrors.tuna.tsinghua.edu.cn/centos-stream/9-stream/BaseOS/x86_64/iso/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -477,9 +477,9 @@
 &lt;ol&gt;
 &lt;li&gt;完成上述操作,单击&amp;quot;开始安装”,等待安装完成,并进入之后的”CentOS9网络配置”章节.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;centos9网络配置&#34;&gt;CentOS9网络配置
-&lt;/h1&gt;&lt;h2 id=&#34;网络配置&#34;&gt;网络配置
-&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;centos9网络配置&#34;&gt;CentOS9网络配置
+&lt;/h2&gt;&lt;h3 id=&#34;网络配置&#34;&gt;网络配置
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;一共是需要配置4个地方&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;一-虚拟网络编辑器&#34;&gt;一. ”虚拟网络编辑器”
@@ -539,8 +539,8 @@
 		data-flex-basis=&#34;320px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;ens160connection设置&#34;&gt;ens160connection设置
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;ens160connection设置&#34;&gt;ens160connection设置
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;切换到管理员用户:&lt;code&gt;su root&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;进入ens160connections文件进行配置:&lt;code&gt;vim /etc/NetworkManager/system-connections/ens160.nmconnection&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;连接方法为手动(manual)
@@ -563,8 +563,8 @@ DNS地址设置两个常见的即可:8.8.8.8和114.114.114.114.&lt;/li&gt;
 		data-flex-basis=&#34;298px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;resolvconf设置&#34;&gt;&lt;strong&gt;resolv.conf设置&lt;/strong&gt;
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;resolvconf设置&#34;&gt;&lt;strong&gt;resolv.conf设置&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;终端输入命令&lt;code&gt;vim /etc/resolv.conf&lt;/code&gt;,对文件进行设置:&lt;/li&gt;
 &lt;li&gt;添加两个nameserver,即上文配置的DNS地址.&lt;/li&gt;
 &lt;/ul&gt;
@@ -582,8 +582,8 @@ DNS地址设置两个常见的即可:8.8.8.8和114.114.114.114.&lt;/li&gt;
 		data-flex-basis=&#34;294px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;网络设置&#34;&gt;网络设置
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;网络设置&#34;&gt;网络设置
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;返回GUI界面,右上角打开设置,进行网络配置:这里设置手动,地址等参数均与上文相同!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://chanxin29.com/p/centos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/pic31.png&#34;
@@ -600,21 +600,21 @@ DNS地址设置两个常见的即可:8.8.8.8和114.114.114.114.&lt;/li&gt;
 		data-flex-basis=&#34;278px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h2 id=&#34;测试&#34;&gt;测试
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;测试&#34;&gt;测试
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;自此,应该能成功连接网络,在终端输入命令&lt;code&gt;ping www.baidu.com&lt;/code&gt;进行测试!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;安装centos9提示网络电缆被拔出&#34;&gt;安装CentOS9提示网络电缆被拔出
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;解决方案:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装centos9提示网络电缆被拔出&#34;&gt;安装CentOS9提示网络电缆被拔出
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;解决方案:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Win+R，输入service.msc, 打开服务窗口;&lt;/li&gt;
 &lt;li&gt;找到VMware开头的服务项, &lt;strong&gt;启动VMware NAT Service, VMware DHCP Service&lt;/strong&gt;等.;&lt;/li&gt;
 &lt;li&gt;回到虚拟机, 报错消失.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;centos部署常用软件&#34;&gt;CentOS部署常用软件
-&lt;/h1&gt;&lt;h2 id=&#34;redis7&#34;&gt;Redis7
-&lt;/h2&gt;&lt;h2 id=&#34;nginx&#34;&gt;Nginx
-&lt;/h2&gt;</description>
+&lt;h2 id=&#34;centos部署常用软件&#34;&gt;CentOS部署常用软件
+&lt;/h2&gt;&lt;h3 id=&#34;redis7&#34;&gt;Redis7
+&lt;/h3&gt;&lt;h3 id=&#34;nginx&#34;&gt;Nginx
+&lt;/h3&gt;</description>
         </item>
         <item>
         <title>MyFirstBlog</title>

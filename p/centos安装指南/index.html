@@ -207,25 +207,29 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#centos9安装-1">CentOS9安装</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#网络配置">网络配置</a>
+    <li><a href="#vmware安装">VMware安装</a></li>
+    <li><a href="#centos-stream-9安装与配置">CentOS Stream 9安装与配置</a>
       <ol>
-        <li><a href="#一-虚拟网络编辑器">一. ”虚拟网络编辑器”</a></li>
+        <li><a href="#centos9安装-1">CentOS9安装</a></li>
       </ol>
     </li>
-    <li><a href="#ens160connection设置">ens160connection设置</a></li>
-    <li><a href="#resolvconf设置"><strong>resolv.conf设置</strong></a></li>
-    <li><a href="#网络设置">网络设置</a></li>
-    <li><a href="#测试">测试</a></li>
-    <li><a href="#安装centos9提示网络电缆被拔出">安装CentOS9提示网络电缆被拔出</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#redis7">Redis7</a></li>
-    <li><a href="#nginx">Nginx</a></li>
+    <li><a href="#centos9网络配置">CentOS9网络配置</a>
+      <ol>
+        <li><a href="#网络配置">网络配置</a></li>
+        <li><a href="#一-虚拟网络编辑器">一. ”虚拟网络编辑器”</a></li>
+        <li><a href="#ens160connection设置">ens160connection设置</a></li>
+        <li><a href="#resolvconf设置"><strong>resolv.conf设置</strong></a></li>
+        <li><a href="#网络设置">网络设置</a></li>
+        <li><a href="#测试">测试</a></li>
+        <li><a href="#安装centos9提示网络电缆被拔出">安装CentOS9提示网络电缆被拔出</a></li>
+      </ol>
+    </li>
+    <li><a href="#centos部署常用软件">CentOS部署常用软件</a>
+      <ol>
+        <li><a href="#redis7">Redis7</a></li>
+        <li><a href="#nginx">Nginx</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -294,8 +298,8 @@
     <h1 id="centos9安装">CentOS9安装
 </h1><p>本文介绍了如何在VMware Workstation安装与配置CentOS Stream 9, 包括网络配置等.</p>
 <p>以下将CentOS Stream 9简称为CentOS9</p>
-<h1 id="vmware安装">VMware安装
-</h1><ul>
+<h2 id="vmware安装">VMware安装
+</h2><ul>
 <li>官网下载,安装到自己想要的路径即可.</li>
 <li>若安装完发现是英文版,则可通过在打开路径后面添加<code>--locale zh_CN</code>即可.</li>
 </ul>
@@ -313,8 +317,8 @@
 		data-flex-basis="204px"
 	
 ></p>
-<h1 id="centos-stream-9安装与配置">CentOS Stream 9安装与配置
-</h1><blockquote>
+<h2 id="centos-stream-9安装与配置">CentOS Stream 9安装与配置
+</h2><blockquote>
 <p>因为CentOS7目前已经暂停更新了,所以作为新手,我想着还是直接安装最新的CentOS Stream 9来用.并且网络上大多是关于CentOS7的安装,故我写此博客,记录一下自己的安装过程以及踩过的坑.</p>
 </blockquote>
 <p><img src="/post/CentOS9_Install/pic2.png"
@@ -327,8 +331,8 @@
 	
 	
 ></p>
-<h2 id="centos9安装-1">CentOS9安装
-</h2><ol>
+<h3 id="centos9安装-1">CentOS9安装
+</h3><ol>
 <li>
 <p>先下载CentOS9的光盘映射文件,这里建议下载**&quot;~.dvd1.iso”<strong>文件,这样的话在创建虚拟机时,就不会出现</strong>&ldquo;下载软件元数据包”**的错误.</p>
 <p>下载地址:<a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/centos-stream/9-stream/BaseOS/x86_64/iso/"  target="_blank" rel="noopener"
@@ -673,9 +677,9 @@
 <ol>
 <li>完成上述操作,单击&quot;开始安装”,等待安装完成,并进入之后的”CentOS9网络配置”章节.</li>
 </ol>
-<h1 id="centos9网络配置">CentOS9网络配置
-</h1><h2 id="网络配置">网络配置
-</h2><blockquote>
+<h2 id="centos9网络配置">CentOS9网络配置
+</h2><h3 id="网络配置">网络配置
+</h3><blockquote>
 <p>一共是需要配置4个地方</p>
 </blockquote>
 <h3 id="一-虚拟网络编辑器">一. ”虚拟网络编辑器”
@@ -735,8 +739,8 @@
 		data-flex-basis="320px"
 	
 ></p>
-<h2 id="ens160connection设置">ens160connection设置
-</h2><ul>
+<h3 id="ens160connection设置">ens160connection设置
+</h3><ul>
 <li>切换到管理员用户:<code>su root</code></li>
 <li>进入ens160connections文件进行配置:<code>vim /etc/NetworkManager/system-connections/ens160.nmconnection</code></li>
 <li>连接方法为手动(manual)
@@ -759,8 +763,8 @@ DNS地址设置两个常见的即可:8.8.8.8和114.114.114.114.</li>
 		data-flex-basis="298px"
 	
 ></p>
-<h2 id="resolvconf设置"><strong>resolv.conf设置</strong>
-</h2><ul>
+<h3 id="resolvconf设置"><strong>resolv.conf设置</strong>
+</h3><ul>
 <li>终端输入命令<code>vim /etc/resolv.conf</code>,对文件进行设置:</li>
 <li>添加两个nameserver,即上文配置的DNS地址.</li>
 </ul>
@@ -778,8 +782,8 @@ DNS地址设置两个常见的即可:8.8.8.8和114.114.114.114.</li>
 		data-flex-basis="294px"
 	
 ></p>
-<h2 id="网络设置">网络设置
-</h2><ul>
+<h3 id="网络设置">网络设置
+</h3><ul>
 <li>返回GUI界面,右上角打开设置,进行网络配置:这里设置手动,地址等参数均与上文相同!</li>
 </ul>
 <p><img src="/p/centos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/pic31.png"
@@ -796,21 +800,21 @@ DNS地址设置两个常见的即可:8.8.8.8和114.114.114.114.</li>
 		data-flex-basis="278px"
 	
 ></p>
-<h2 id="测试">测试
-</h2><ul>
+<h3 id="测试">测试
+</h3><ul>
 <li>自此,应该能成功连接网络,在终端输入命令<code>ping www.baidu.com</code>进行测试!</li>
 </ul>
-<h2 id="安装centos9提示网络电缆被拔出">安装CentOS9提示网络电缆被拔出
-</h2><p><strong>解决方案:</strong></p>
+<h3 id="安装centos9提示网络电缆被拔出">安装CentOS9提示网络电缆被拔出
+</h3><p><strong>解决方案:</strong></p>
 <ol>
 <li>Win+R，输入service.msc, 打开服务窗口;</li>
 <li>找到VMware开头的服务项, <strong>启动VMware NAT Service, VMware DHCP Service</strong>等.;</li>
 <li>回到虚拟机, 报错消失.</li>
 </ol>
-<h1 id="centos部署常用软件">CentOS部署常用软件
-</h1><h2 id="redis7">Redis7
-</h2><h2 id="nginx">Nginx
-</h2>
+<h2 id="centos部署常用软件">CentOS部署常用软件
+</h2><h3 id="redis7">Redis7
+</h3><h3 id="nginx">Nginx
+</h3>
 </section>
 
 

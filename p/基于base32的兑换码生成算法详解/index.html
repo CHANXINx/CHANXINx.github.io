@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="基于BASE32的兑换码生成算法详解\rCite:来源于黑马程序员-天机学堂，该算法基于BASE32算法与JWT的加密思想。\n需求分析\r对于优惠券兑换码，具有以下需求：\n可读性强：设想，你拿到一个兑换码，其中既含有I、又含有1（或是既含有O、又含有0，对于某些无法区分这两者的字体，读者体验感会大大降低！ 数据量大：兑换码的需求量往往是很大的，毕竟给使用者发放兑换码可以促进消费，且不带来什么损失。同时，考虑到未来可能的需求，也要求算法所能生成的兑换码数据量是千万乃至亿级。（总之，越大越好~） 不可重兑：这算是硬性要求了！如果不能根据兑换码来判断是否使用过，那么对商家的损失就太大了。 防止爆刷：这也是硬性要求！！设想，你的兑换码生成算法被有心者破译，那么利用某些无门槛券来购买某些商品，甚至出售兑换码，那么造成的损失是不可估量的！ 效率高：兑换码生成和校验必须是高效率的。 算法分析\r基本算法\r基于需求分析，我们来逐步拆解兑换码生成算法。\n">
-<title>基于BASE32的兑换码生成算法详解</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="详解支持40亿量级的兑换码生成算法">
+<meta name="keywords" content="兑换码生成算法, JAVA"><title>基于BASE32的兑换码生成算法详解</title>
 
 <link rel='canonical' href='https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/'>
 
 <link rel="stylesheet" href="/scss/style.min.677ab53250fc58ae8be755bc29153d126b02caf181badc9e70d0c472a5470068.css"><meta property='og:title' content="基于BASE32的兑换码生成算法详解">
-<meta property='og:description' content="基于BASE32的兑换码生成算法详解\rCite:来源于黑马程序员-天机学堂，该算法基于BASE32算法与JWT的加密思想。\n需求分析\r对于优惠券兑换码，具有以下需求：\n可读性强：设想，你拿到一个兑换码，其中既含有I、又含有1（或是既含有O、又含有0，对于某些无法区分这两者的字体，读者体验感会大大降低！ 数据量大：兑换码的需求量往往是很大的，毕竟给使用者发放兑换码可以促进消费，且不带来什么损失。同时，考虑到未来可能的需求，也要求算法所能生成的兑换码数据量是千万乃至亿级。（总之，越大越好~） 不可重兑：这算是硬性要求了！如果不能根据兑换码来判断是否使用过，那么对商家的损失就太大了。 防止爆刷：这也是硬性要求！！设想，你的兑换码生成算法被有心者破译，那么利用某些无门槛券来购买某些商品，甚至出售兑换码，那么造成的损失是不可估量的！ 效率高：兑换码生成和校验必须是高效率的。 算法分析\r基本算法\r基于需求分析，我们来逐步拆解兑换码生成算法。\n">
+<meta property='og:description' content="详解支持40亿量级的兑换码生成算法">
 <meta property='og:url' content='https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/'>
 <meta property='og:site_name' content='Chan&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-12-22T02:10:03&#43;08:00'/><meta property='article:modified_time' content='2024-12-22T02:10:03&#43;08:00'/>
 <meta name="twitter:title" content="基于BASE32的兑换码生成算法详解">
-<meta name="twitter:description" content="基于BASE32的兑换码生成算法详解\rCite:来源于黑马程序员-天机学堂，该算法基于BASE32算法与JWT的加密思想。\n需求分析\r对于优惠券兑换码，具有以下需求：\n可读性强：设想，你拿到一个兑换码，其中既含有I、又含有1（或是既含有O、又含有0，对于某些无法区分这两者的字体，读者体验感会大大降低！ 数据量大：兑换码的需求量往往是很大的，毕竟给使用者发放兑换码可以促进消费，且不带来什么损失。同时，考虑到未来可能的需求，也要求算法所能生成的兑换码数据量是千万乃至亿级。（总之，越大越好~） 不可重兑：这算是硬性要求了！如果不能根据兑换码来判断是否使用过，那么对商家的损失就太大了。 防止爆刷：这也是硬性要求！！设想，你的兑换码生成算法被有心者破译，那么利用某些无门槛券来购买某些商品，甚至出售兑换码，那么造成的损失是不可估量的！ 效率高：兑换码生成和校验必须是高效率的。 算法分析\r基本算法\r基于需求分析，我们来逐步拆解兑换码生成算法。\n">
+<meta name="twitter:description" content="详解支持40亿量级的兑换码生成算法">
     </head>
     <body class="
     article-page
@@ -242,6 +242,10 @@
             <a href="/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">基于BASE32的兑换码生成算法详解</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            详解支持40亿量级的兑换码生成算法
+        </h3>
         
     </div>
 
