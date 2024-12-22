@@ -28,7 +28,20 @@
 &lt;h2 id=&#34;算法分析&#34;&gt;算法分析
 &lt;/h2&gt;&lt;h3 id=&#34;基本算法&#34;&gt;基本算法
 &lt;/h3&gt;&lt;p&gt;基于需求分析，我们来逐步拆解兑换码生成算法。&lt;/p&gt;
-&lt;p&gt;考虑到不可使用I1、O0，那么可以使用的字符为：A~Z中的24个字母、0~9中的8个数字，一共32个字符可使用。而$2^5=32$，那我们就可以用一个5位二进制数来表示1个字符，而为了满足”数据量大“的要求，我们可以使用一个32位的二进制数！这样，一个32位的二进制数就可以生成![[Pasted image 20241222023930.png]]个兑换码！基本可以满足大部分应用场景了！&lt;/p&gt;
+&lt;p&gt;考虑到不可使用I1、O0，那么可以使用的字符为：A~Z中的24个字母、0~9中的8个数字，一共32个字符可使用。而$2^5=32$，那我们就可以用一个5位二进制数来表示1个字符，而为了满足”数据量大“的要求，我们可以使用一个32位的二进制数！这样，一个32位的二进制数就可以生成&lt;img src=&#34;https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/pic1.png&#34;
+	width=&#34;181&#34;
+	height=&#34;59&#34;
+	srcset=&#34;https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/pic1_hu9618510635507683007.png 480w, https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/pic1_hu1293152968568993143.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;pic1.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;306&#34;
+		data-flex-basis=&#34;736px&#34;
+	
+&gt;个兑换码！基本可以满足大部分应用场景了！&lt;/p&gt;
 &lt;p&gt;但是，到这也只是完成了“数据量大”和“可读性强”这两个要求！剩下两个呢？&lt;/p&gt;
 &lt;p&gt;考虑到需要快速判断，所以将兑换码记录插入数据库，并以兑换码（作为主键或者字段）是否存在来判断是否被兑换过，肯定是不可行的！
 这里不可行主要有两点：①频繁查询数据库(?)；②兑换码太多，对数据库存储压力大！&lt;/p&gt;
@@ -51,7 +64,20 @@
 &lt;li&gt;获取14位二进制数后，截取其后5位二进制数，与转换为10进制后对应的大质数进行异或，以进一步混淆秘钥。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;最后，我们将PayLoad+新鲜值+密钥拼接，就可以得到50位二进制数，以每5位为一组转换为10进制数，就可以对应32位字符中的一个。
-![[Pasted image 20241222141958.png]]&lt;/p&gt;
+&lt;img src=&#34;https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/pic2.png&#34;
+	width=&#34;1570&#34;
+	height=&#34;402&#34;
+	srcset=&#34;https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/pic2_hu6349910856755485957.png 480w, https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/pic2_hu15391111127764918277.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;FLOW&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;390&#34;
+		data-flex-basis=&#34;937px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;h3 id=&#34;总结&#34;&gt;总结
 &lt;/h3&gt;&lt;p&gt;到这里，我们已成功完成兑换码的生成，总结一下5个要求是否都满足：&lt;/p&gt;
 &lt;ol&gt;
@@ -95,18 +121,14 @@
 &lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;因为CentOS7目前已经暂停更新了,所以作为新手,我想着还是直接安装最新的CentOS Stream 9来用.并且网络上大多是关于CentOS7的安装,故我写此博客,记录一下自己的安装过程以及踩过的坑.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://chanxin29.com/p/centos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/pic2.png&#34;
-	width=&#34;676&#34;
-	height=&#34;168&#34;
-	srcset=&#34;https://chanxin29.com/p/centos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/pic2_hu11563536712298320307.png 480w, https://chanxin29.com/p/centos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/pic2_hu1849403425019111504.png 1024w&#34;
+&lt;p&gt;&lt;img src=&#34;https://chanxin29.com/post/CentOS9_Install/pic2.png&#34;
+	
+	
+	
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Untitled&#34;
 	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;402&#34;
-		data-flex-basis=&#34;965px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;centos9安装-1&#34;&gt;CentOS9安装
