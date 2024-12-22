@@ -1,1 +1,5 @@
 User-agent: *
+Allow: /
+Disallow: /assets/
+
+Sitemap: https://chanxin29.com/sitemap.xml
