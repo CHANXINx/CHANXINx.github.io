@@ -6,7 +6,30 @@
         <description>Recent content on Chan&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 22 Dec 2024 02:10:03 +0800</lastBuildDate><atom:link href="https://chanxin29.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 19 Jan 2025 14:25:51 +0800</lastBuildDate><atom:link href="https://chanxin29.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MostFrequentlyUsedShortCut</title>
+        <link>https://chanxin29.com/p/mostfrequentlyusedshortcut/</link>
+        <pubDate>Sun, 19 Jan 2025 14:25:51 +0800</pubDate>
+        
+        <guid>https://chanxin29.com/p/mostfrequentlyusedshortcut/</guid>
+        <description>&lt;h2 id=&#34;常用快捷键总结&#34;&gt;常用快捷键总结
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;某些快捷键为个性化自定义。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;idea&#34;&gt;IDEA
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;阅读源码时用于跳转/返回：&lt;code&gt;CRTL + SHFIT + ALT + →/←&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开/关闭侧边栏Project：&lt;code&gt;ALT + 1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看当前文件的结构：&lt;code&gt;ALT + 7&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看usage：&lt;code&gt;ALT + F7&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;通义千问提示：&lt;code&gt;ALT + P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看方法的输入：&lt;code&gt;CTRL + P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看方法信息：&lt;code&gt;CTRL + Q&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未完结&amp;hellip;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>基于BASE32的兑换码生成算法详解</title>
         <link>https://chanxin29.com/p/%E5%9F%BA%E4%BA%8Ebase32%E7%9A%84%E5%85%91%E6%8D%A2%E7%A0%81%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Sun, 22 Dec 2024 02:10:03 +0800</pubDate>
